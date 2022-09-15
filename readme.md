@@ -10,7 +10,12 @@ Instalações NodeJS com TS:
 - npm i rimraf -> (para apagar a pasta dist antes de cada build)
 - Definir os "paths" no tsconfig.json
 
-ESLint
+ESLint, Prettier, Editor Config
 
 - npm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-config-prettier eslint-plugin-prettier
 - Criar os arquivos .eslintrc.cjs, .eslintignore, .prettierrc, .prettierignore
+
+Express
+
+- npm i express express-async-errors
+- npm i -D @types/express @types/express-async-errors
