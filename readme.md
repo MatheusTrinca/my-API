@@ -18,4 +18,13 @@ ESLint, Prettier, Editor Config
 Express
 
 - npm i express express-async-errors
-- npm i -D @types/express @types/express-async-errors
+- npm i -D @types/express
+
+Cors
+
+- npm i cors
+- npm i -D @types/cors
+
+DotEnv
+
+- npm i dotenv
