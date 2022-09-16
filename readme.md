@@ -28,3 +28,10 @@ Cors
 DotEnv
 
 - npm i dotenv
+
+Swagger
+
+- npm i swagger-ui-express
+- npm i -D @types/swagger-ui-express
+
+TypeORM
