@@ -1,7 +1,7 @@
 ## My API - Projeto de Estudo usando NodeJS com Typescript
 
 <hr>
-Instalações NodeJS com TS:
+Instalações NodeJS com TS
 
 - npm i -D typescript @types/node ts-node-dev tsconfig-paths
 - npx tsc --init
@@ -35,3 +35,9 @@ Swagger
 - npm i -D @types/swagger-ui-express
 
 TypeORM
+
+- npm i typeorm reflect-metadata
+
+SQLite
+
+- npm i sqlite3
