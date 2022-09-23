@@ -41,3 +41,8 @@ TypeORM
 SQLite
 
 - npm i sqlite3
+
+Celebrate
+
+- npm i celebrate
+- npm i -D types/joi
