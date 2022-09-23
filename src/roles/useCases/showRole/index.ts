@@ -3,5 +3,5 @@ import { ShowRoleController } from './ShowRoleController'
 import { ShowRoleUseCase } from './ShowRoleUseCase'
 
 const rolesRepository = RolesRepository.getInstance()
-export const showRoleUseCase = new ShowRoleUseCase(rolesRepository)
+const showRoleUseCase = new ShowRoleUseCase(rolesRepository)
 export const showRoleController = new ShowRoleController(showRoleUseCase)

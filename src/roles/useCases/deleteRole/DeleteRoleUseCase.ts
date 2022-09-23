@@ -1,21 +1,20 @@
-import { Role } from '@roles/entities/Role'
 import { RolesRepository } from '@roles/repositories/RolesRepository'
 import { AppError } from '@shared/errors/AppError'
 
-type ShowRoleParams = {
+type DeleteRoleDTO = {
   id: string
 }
 
-export class ShowRoleUseCase {
+export class DeleteRoleUseCase {
   constructor(private rolesRepository: RolesRepository) {}
 
-  async execute({ id }: ShowRoleParams): Promise<Role> {
+  async execute({ id }: DeleteRoleDTO): Promise<void> {
     const role = await this.rolesRepository.findById(id)
 
     if (!role) {
       throw new AppError('Role not found', 404)
     }
 
-    return role
+    await this.rolesRepository.delete(role)
   }
 }
