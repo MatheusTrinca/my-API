@@ -6,6 +6,7 @@ import { routes } from './routes'
 import { AppError } from '@shared/errors/AppError'
 import swaggerFile from '../../swagger.json'
 import { errors } from 'celebrate'
+import '@shared/container'
 
 const app = express()
 

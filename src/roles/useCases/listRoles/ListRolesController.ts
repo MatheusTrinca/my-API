@@ -1,10 +1,11 @@
 import { Request, Response } from 'express'
+import { container } from 'tsyringe'
 import { ListRolesUseCase } from './ListRolesUseCase'
 
 export class ListRolesController {
-  constructor(private listRolesUseCase: ListRolesUseCase) {}
-
   async handle(request: Request, response: Response): Promise<Response> {
+    const listRolesUseCase = container.resolve(ListRolesUseCase)
+
     const page =
       request.query.page && Number(request.query.page) > 0
         ? Number(request.query.page)
@@ -15,7 +16,7 @@ export class ListRolesController {
         ? Number(request.query.limit)
         : 15
 
-    const roles = await this.listRolesUseCase.execute({ page, limit })
+    const roles = await listRolesUseCase.execute({ page, limit })
 
     return response.json(roles)
   }
