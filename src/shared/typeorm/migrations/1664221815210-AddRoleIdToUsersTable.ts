@@ -10,7 +10,7 @@ export class AddRoleIdToUsersTable1664221815210 implements MigrationInterface {
     await queryRunner.addColumn(
       'users',
       new TableColumn({
-        name: 'roleId',
+        name: 'roleId', // Camel case para o nome do campo pegar no relacionamento automaticamente
         type: 'uuid',
         isNullable: true,
       }),
