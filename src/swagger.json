@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "MyAPI Documentation",
-    "description": "MyAPI Documentation with all specifications",
+    "description": "MyAPI Documentation with all the specifications",
     "version": "1.0.0",
     "contact": {
       "name": "Matheus Felipe",
