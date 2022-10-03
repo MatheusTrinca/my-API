@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "c41dc0e6-5503-401c-8522-bb6b5a56f650",
+    "colId": "90013bcc-e668-4897-b645-42c8665929da",
+    "containerId": "",
+    "name": "Listar",
+    "url": "{{BaseUrl}}/roles",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-10-03T22:43:42.719Z",
+    "modified": "2022-10-03T22:45:04.695Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "4f500918-32d0-4184-8e5c-7e86f2152715",
+    "colId": "90013bcc-e668-4897-b645-42c8665929da",
+    "containerId": "",
+    "name": "Exibir",
+    "url": "{{BaseUrl}}/roles/5d035eab-1008-4991-aef3-1931cab090c3",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-10-03T22:45:15.604Z",
+    "modified": "2022-10-03T22:45:30.076Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "86160ce2-9448-40a7-b698-f75ca3069a1a",
+    "colId": "90013bcc-e668-4897-b645-42c8665929da",
+    "containerId": "",
+    "name": "Alterar",
+    "url": "{{BaseUrl}}/roles/5d035eab-1008-4991-aef3-1931cab090c3",
+    "method": "PUT",
+    "sortNum": 30000,
+    "created": "2022-10-03T22:45:56.585Z",
+    "modified": "2022-10-03T22:46:35.786Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Content Manager 1\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "32a4fd22-5644-4587-9dfe-6b44b5937c92",
+    "colId": "90013bcc-e668-4897-b645-42c8665929da",
+    "containerId": "",
+    "name": "Criar",
+    "url": "{{BaseUrl}}/roles",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-10-03T22:46:42.863Z",
+    "modified": "2022-10-03T22:47:04.952Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Content Manager 7\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "eea0a777-1e56-42df-81fd-5d86e1a64592",
+    "colId": "90013bcc-e668-4897-b645-42c8665929da",
+    "containerId": "",
+    "name": "Excluir",
+    "url": "{{BaseUrl}}/roles/f15a8346-3e51-403d-8182-9bc11d92e049",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-10-03T22:47:11.848Z",
+    "modified": "2022-10-03T22:47:32.919Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Content Manager 7\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

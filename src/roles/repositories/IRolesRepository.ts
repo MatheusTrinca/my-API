@@ -20,7 +20,7 @@ export type RolesPaginateProperties = {
 export interface IRolesRepository {
   create({ name }: CreateRoleDTO): Promise<Role>
 
-  save({ name }: Role): Promise<Role>
+  save(role: Role): Promise<Role>
 
   delete(role: Role): Promise<void>
 
