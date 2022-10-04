@@ -22,7 +22,7 @@ export class UsersRepository implements IUsersRepository {
     password,
     isAdmin,
     role,
-  }: CreateUserDTO): Promise<Role> {
+  }: CreateUserDTO): Promise<User> {
     const user = this.repository.create({
       name,
       email,
