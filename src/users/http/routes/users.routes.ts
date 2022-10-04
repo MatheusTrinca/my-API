@@ -2,10 +2,12 @@ import { Router } from 'express'
 import { Segments, Joi, celebrate } from 'celebrate'
 import { container } from 'tsyringe'
 import { CreateUserController } from '@users/useCases/createUser/CreateUserController'
+import { ListUsersController } from '@users/useCases/listUsers/ListUsersController'
 
 const usersRoutes = Router()
 
 const createUserController = container.resolve(CreateUserController)
+const listUsersUseCase = container.resolve(ListUsersController)
 
 usersRoutes.post(
   '/',
@@ -20,6 +22,19 @@ usersRoutes.post(
   }),
   (request, response) => {
     return createUserController.handle(request, response)
+  },
+)
+
+usersRoutes.get(
+  '/',
+  celebrate({
+    [Segments.QUERY]: Joi.object().keys({
+      page: Joi.string(),
+      limit: Joi.string(),
+    }),
+  }),
+  (request, response) => {
+    return listUsersUseCase.handle(request, response)
   },
 )
 

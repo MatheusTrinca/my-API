@@ -1,8 +1,8 @@
+import { inject, injectable } from 'tsyringe'
 import {
   IRolesRepository,
   RolesPaginateProperties,
 } from '@roles/repositories/IRolesRepository'
-import { inject, injectable } from 'tsyringe'
 
 type ListRolesUseCaseParams = {
   page: number

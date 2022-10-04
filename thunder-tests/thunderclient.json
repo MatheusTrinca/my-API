@@ -93,14 +93,28 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-10-04T13:05:06.294Z",
-    "modified": "2022-10-04T13:14:16.464Z",
+    "modified": "2022-10-04T19:29:16.242Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Felipe\",\n  \"email\": \"felipe@gmail.com\",\n  \"password\": \"teste123\",\n  \"isAdmin\": false,\n  \"roleId\": \"3399871b-00ab-4177-bc50-847039358de3\"\n}",
+      "raw": "{\n  \"name\": \"Felipe\",\n  \"email\": \"felipe@gmail.com\",\n  \"password\": \"teste123\",\n  \"isAdmin\": false,\n  \"roleId\": \"f5fb1256-2666-4f3d-af29-6fb76ae2486f\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "45ecd238-58fb-4ebc-852f-2c82bb6f214a",
+    "colId": "91e18183-778a-4b4d-be35-892a2c73575e",
+    "containerId": "",
+    "name": "Listar",
+    "url": "{{BaseUrl}}/users",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-10-04T19:27:48.449Z",
+    "modified": "2022-10-04T19:29:58.500Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
