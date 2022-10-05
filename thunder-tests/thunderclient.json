@@ -93,12 +93,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-10-04T13:05:06.294Z",
-    "modified": "2022-10-04T19:29:16.242Z",
+    "modified": "2022-10-05T20:33:07.919Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Felipe\",\n  \"email\": \"felipe@gmail.com\",\n  \"password\": \"teste123\",\n  \"isAdmin\": false,\n  \"roleId\": \"f5fb1256-2666-4f3d-af29-6fb76ae2486f\"\n}",
+      "raw": "{\n  \"name\": \"Trinca\",\n  \"email\": \"trinca@gmail.com\",\n  \"password\": \"teste123\",\n  \"isAdmin\": false,\n  \"roleId\": \"f5fb1256-2666-4f3d-af29-6fb76ae2486f\"\n}",
       "form": []
     },
     "tests": []
@@ -115,6 +115,25 @@
     "modified": "2022-10-04T19:29:58.500Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6e05c8bb-0b56-4f09-b29b-f555803ef69d",
+    "colId": "91e18183-778a-4b4d-be35-892a2c73575e",
+    "containerId": "",
+    "name": "Login",
+    "url": "{{BaseUrl}}/users/login",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-10-05T22:09:27.578Z",
+    "modified": "2022-10-05T22:10:15.058Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"matheus@gmail.com\",\n  \"password\": \"teste123\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
