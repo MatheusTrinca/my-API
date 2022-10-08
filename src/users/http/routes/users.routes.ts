@@ -4,6 +4,7 @@ import { container } from 'tsyringe'
 import { CreateUserController } from '@users/useCases/createUser/CreateUserController'
 import { ListUsersController } from '@users/useCases/listUsers/ListUsersController'
 import { CreateLoginController } from '@users/useCases/createLogin/CreateLoginController'
+import { isAuthenticated } from '../middlewares/isAuthenticated'
 
 const usersRoutes = Router()
 
@@ -29,6 +30,7 @@ usersRoutes.post(
 
 usersRoutes.get(
   '/',
+  isAuthenticated,
   celebrate({
     [Segments.QUERY]: Joi.object().keys({
       page: Joi.string(),
