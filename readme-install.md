@@ -46,3 +46,7 @@ Celebrate
 
 - npm i celebrate
 - npm i -D types/joi
+
+Migrations Run
+
+- npm run typeorm -- -d ./src/shared/typeorm/index.ts migration:run
