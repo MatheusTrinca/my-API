@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import { AppError } from '@shared/errors/AppError'
 import { User } from '@users/entities/User'
 import { IUsersRepository } from '@users/repositories/IUsersRepository'

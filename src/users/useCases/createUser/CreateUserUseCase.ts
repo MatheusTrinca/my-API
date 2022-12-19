@@ -3,7 +3,7 @@ import { AppError } from '@shared/errors/AppError'
 import { User } from '@users/entities/User'
 import { IUsersRepository } from '@users/repositories/IUsersRepository'
 import { inject, injectable } from 'tsyringe'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 type CreateUserDTO = {
   name: string
