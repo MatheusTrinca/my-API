@@ -1,5 +1,5 @@
 import { Role } from '@roles/entities/Role'
-import { Exclude } from 'class-transformer'
+import { Exclude, Expose } from 'class-transformer'
 import {
   Column,
   CreateDateColumn,
@@ -30,12 +30,20 @@ export class User {
   @Column()
   avatar?: string
 
-  @CreateDateColumn()
-  createdAt: Date
-
   // Muitos Users(essa classe) uma Role só
   @ManyToOne(() => Role, { cascade: true })
   role: Role
+
+  @CreateDateColumn()
+  createdAt: Date
+
+  @Expose({ name: 'avatar_url' })
+  getAvatarUrl(): string | null {
+    if (!this.avatar) {
+      return null
+    }
+    return `${process.env.AVATAR_URL}/${this.avatar}`
+  }
 
   constructor() {
     if (!this.id) {
