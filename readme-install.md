@@ -49,4 +49,11 @@ Celebrate
 
 Migrations Run
 
-- npm run typeorm -- -d ./src/shared/typeorm/index.ts migration:run
+- package.json script -> "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+- yarn run typeorm migration:create src/shared/typeorm/migrations/CreateRefreshTokensTable
+- yarn run typeorm -- -d ./src/shared/typeorm/index.ts migration:run
+
+Multer
+
+- yarn add multer
+- yarn add -D @types/multer
