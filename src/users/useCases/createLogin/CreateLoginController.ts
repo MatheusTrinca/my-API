@@ -8,8 +8,12 @@ export class CreateLoginController {
     const createLogiUseCase = container.resolve(CreateLoginUseCase)
     const { email, password } = request.body
 
-    const { user, token } = await createLogiUseCase.execute({ email, password })
+    const { user, accessToken, refreshToken } = await createLogiUseCase.execute(
+      { email, password },
+    )
 
-    return response.status(200).json(instanceToInstance({ user, token }))
+    return response
+      .status(200)
+      .json(instanceToInstance({ user, accessToken, refreshToken }))
   }
 }
