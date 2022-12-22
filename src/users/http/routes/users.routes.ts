@@ -5,11 +5,13 @@ import { container } from 'tsyringe'
 import { CreateUserController } from '@users/useCases/createUser/CreateUserController'
 import { ListUsersController } from '@users/useCases/listUsers/ListUsersController'
 import { CreateLoginController } from '@users/useCases/createLogin/CreateLoginController'
-import { isAuthenticated } from '../middlewares/isAuthenticated'
+import { isAuthenticated } from '@shared/http/middlewares/isAuthenticated'
 import uploadConfig from '@config/upload'
 import { UpdateAvatarController } from '@users/useCases/updateAvatar/UpdateAvatarController'
 import { ShowProfileController } from '@users/useCases/showProfile/ShowProfileController'
 import { UpdateProfileController } from '@users/useCases/updateProfile/UpdateProfileController'
+import { CreateAccessAndRefreshTokenController } from '@users/useCases/createAccessAndRefreshToken/CreateAccessAndRefreshTokenController'
+import { addUserInfoToRequest } from '../middlewares/addUserInfoToRequest'
 
 const usersRoutes = Router()
 
@@ -19,6 +21,9 @@ const createLoginController = container.resolve(CreateLoginController)
 const updateAvatarController = container.resolve(UpdateAvatarController)
 const showProfileController = container.resolve(ShowProfileController)
 const updateProfileController = container.resolve(UpdateProfileController)
+const createAccessAndRefreshTokenController = container.resolve(
+  CreateAccessAndRefreshTokenController,
+)
 const upload = multer(uploadConfig)
 
 usersRoutes.post(
@@ -62,6 +67,19 @@ usersRoutes.post(
   }),
   (request, response) => {
     return createLoginController.handle(request, response)
+  },
+)
+
+usersRoutes.post(
+  '/refresh_token',
+  addUserInfoToRequest,
+  celebrate({
+    [Segments.BODY]: Joi.object().keys({
+      refresh_token: Joi.string().required(),
+    }),
+  }),
+  (request, response) => {
+    return createAccessAndRefreshTokenController.handle(request, response)
   },
 )
 
