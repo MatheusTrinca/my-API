@@ -1,6 +1,6 @@
 ## API Node.js com Typescript
 
-Este repositório refere-se ao projeto **MyAPI**, para gerenciamento de usuários e suas respectivas funções em um contexto empresarial
+Este repositório refere-se ao projeto **MyAPI**, para gerenciamento de usuários e suas respectivas funções em um contexto empresarial.
 
 ## Rodando a aplicação no seu PC
 
@@ -16,5 +16,7 @@ Após clonar o conteúdo do repositório, acesse o diretório criado e efetue a 
 cd my-API
 yarn install
 ```
+
+Instalar o app nextjs criado para exemplo do refresh token, na pasta client
 
 Após essa instalação execute a aplicação em ambiente de desenvolvimento devidamente configurado, através do comando `yarn run dev`.
