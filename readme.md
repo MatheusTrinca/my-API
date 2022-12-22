@@ -1,8 +1,6 @@
-## Curso: Iniciando no desenvolvimento de API Node.js com Typescript
+## API Node.js com Typescript
 
-Seja muito bem-vindo e bem-vinda ao curso: **Iniciando no desenvolvimento de API Node.js com Typescript**.
-
-Este repositório refere-se ao projeto **MyAPI**, desenvolvido durante o curso.
+Este repositório refere-se ao projeto **MyAPI**, para gerenciamento de usuários e suas respectivas funções em um contexto empresarial
 
 ## Rodando a aplicação no seu PC
 
